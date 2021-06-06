@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/gitver
+gitver.so
+gitver.dylib
+gitver.dll
+gitver.a
+gitver.lib
+gitver-test-*
+*.exe
+*.o
+*.obj
+*.lst
+
+dub.selections.json

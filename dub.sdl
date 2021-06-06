@@ -1,0 +1,6 @@
+name "gitver"
+description "Generate version tags from git"
+authors "Luna"
+copyright "Copyright © 2021, Luna"
+license "BSD 2-clause"
+dependency "semver" version="~>0.3.2"
