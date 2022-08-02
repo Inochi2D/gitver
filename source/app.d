@@ -24,6 +24,7 @@ void main(string[] args)
 {
 	bool printOut;
 	string prefix = "V";
+	string itchFile;
 	string file = "source/ver_.d";
 	string mod = "ver_";
 	string appName = null;
@@ -32,6 +33,7 @@ void main(string[] args)
 		"prefix", "Prefix to prepend to the version enum", &prefix,
 		"appname", "Name of app", &appName,
 		"file", "The file to write to", &file,
+		"itchfile", "The file (if any) to write itch.io version number to", &itchFile,
 		"mod", "The name of the module", &mod,
 		"pout", "Print out instead of writing to file", &printOut
 	);
@@ -71,6 +73,11 @@ void main(string[] args)
 		prefix,
 		version_
 	));
+
+	// write stuff out for itch.io
+	if (itchFile.length > 0) {
+		write(itchFile, version_);
+	}
 }
 
 unittest {
