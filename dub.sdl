@@ -4,7 +4,7 @@ authors "Luna"
 copyright "Copyright © 2021, Luna"
 license "BSD 2-clause"
 dependency "semver" version="~>0.3.2" {
-    dflags "-preserve-dwarf-line-section=false" platform="osx"
+    dflags "-preserve-dwarf-line-section=false" platform="osx-x86_64"
 }
 targetPath "out/"
-dflags "-preserve-dwarf-line-section=false" platform="osx"
+dflags "-preserve-dwarf-line-section=false" platform="osx-x86_64"
