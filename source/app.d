@@ -84,6 +84,11 @@ void main(string[] args)
 		version_
 	));
 
+	// write stuff out for itch.io
+	if (itchFile.length > 0) {
+		write(itchFile, version_);
+	}
+
 	if (preserveMTime == "yes") {
 		// Get commitId for version name.
 		auto commitId = execute(GIT_REVLIST_CMD ~ versionName).output.strip;
@@ -100,11 +105,8 @@ void main(string[] args)
 		}
 
 	    setTimes(file, aTime, aTime);
-	}
-
-	// write stuff out for itch.io
-	if (itchFile.length > 0) {
-		write(itchFile, version_);
+		if (itchFile.length > 0)
+		    setTimes(itchFile, aTime, aTime);
 	}
 }
 
