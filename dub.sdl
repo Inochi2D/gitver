@@ -3,8 +3,6 @@ description "Generate version tags from git"
 authors "Luna"
 copyright "Copyright © 2021, Luna"
 license "BSD 2-clause"
-dependency "semver" version="~>0.3.2" {
-    dflags "-force-dwarf-frame-section=false" platform="osx"
-}
+
+dependency "semver" version="~>0.3.2"
 targetPath "out/"
-dflags "-force-dwarf-frame-section=false" platform="osx"
